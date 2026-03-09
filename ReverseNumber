@@ -1,0 +1,36 @@
+package basicMath;
+
+import java.util.Scanner;
+
+public class ReverseNum {
+	
+	public static void main(String[] args) {
+		
+		System.out.println("Enter the digit");
+		Scanner scan = new Scanner(System.in);
+		int num = scan.nextInt();
+		
+		int length = ( int ) (Math.log10(num)+1);
+		
+		int number =num;
+		int reverseNum =0;
+//		while ( number >0)
+//		{
+//		   int unitPl= number %10;
+//		   int number2= (int) ( unitPl * Math.pow(10, (length -1)));
+//		   reverseNum =  reverseNum + number2;
+//		   number = number/10;
+//		   length = length-1;
+//		}
+		
+		while( number >0)
+		{
+			reverseNum = reverseNum*10 + (number%10);
+			number = number/10;
+		}
+		
+		System.out.println("Reverse Number : " + reverseNum);
+		
+	}
+
+}
