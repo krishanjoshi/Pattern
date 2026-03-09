@@ -1,0 +1,57 @@
+package patterns;
+
+public class Pattern19_2 {
+	
+	public static void main(String args[])
+	{
+		int n = 4;
+		for (int i=0 ;i< n;i++)
+		{
+			//Left Stars.
+			for (int j=0;j<(n-i);j++ )
+			{
+				System.out.print("*");
+			}
+			
+			//Space:
+			
+			for(int k=0;k<2*i;k++)
+			{
+				System.out.print(" ");
+			}
+			
+			//Right Star.
+			for (int j=0;j<(n-i);j++ )
+			{
+				System.out.print("*");
+			}
+			System.out.println();
+			
+					
+		}
+		
+		//Bottom Part of figure:
+		for (int i=(n-1);i>=0;i--)
+		{
+			for(int j=(n-i); j>0;j--)
+			{
+				System.out.print("*");
+			}
+			
+			// Space:
+			
+			for( int k=2*i;k>0;k--)
+				System.out.print(" ");
+			
+			//Star:
+			for(int j=(n-i); j>0;j--)
+			{
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		
+	}
+
+}
