@@ -1,0 +1,32 @@
+package basicMath;
+
+public class PrimeFactors {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int num = 12;
+
+		while( num %2 == 0 )
+		{
+			System.out.println(2+ " ");
+			num = num /2;
+		}
+		
+		for ( int i=3; i*i <=num ; i+=2)
+		{
+			while( num%i ==0)
+			{
+				System.out.println(i+ " ");
+				num= num/i;
+			}
+			
+		}
+		
+		if (num >2 )
+			System.out.println(num);
+		
+
+	}
+
+}
