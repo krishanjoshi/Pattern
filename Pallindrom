@@ -1,0 +1,30 @@
+package basicMath;
+
+import java.util.Scanner;
+
+public class Pallindrom {
+	
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter your number.");
+		int num = scan.nextInt();
+		int reverseNum =0;
+		int tempNum = num;
+		while( tempNum > 0 )
+		{
+			int unitDigit = tempNum %10;
+			reverseNum = reverseNum*10 + unitDigit;
+			tempNum = tempNum/10;
+		}
+		
+		//System.out.println("reverserNum" + reverseNum);
+		
+		if (reverseNum == num)
+			System.out.println("Number is Pallindrom.");
+		else
+			System.out.println("Number is not Pallindrom");
+		 
+	}
+
+}
