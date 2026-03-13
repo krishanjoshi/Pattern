@@ -1,0 +1,18 @@
+package recursionDemo;
+
+public class hello {
+	
+	public static String printName(int number)
+	{
+		if (number ==0)
+			return "" ;
+		
+		System.out.println("Krishan");
+		
+		return printName(--number);
+	}
+
+	public static void main(String[] args) {
+		printName(1);
+	}
+}
