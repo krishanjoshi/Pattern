@@ -1,0 +1,32 @@
+package recursionDemo;
+
+public class PrintNumber1ToN {
+	
+   public static void printNumber(int lastNum, int start)
+   {
+	   
+	   if ( start > lastNum )
+		   return;
+	   
+	   System.out.print(start + ", ");
+	   
+	   printNumber(lastNum, start+1);
+   }
+   
+   public static void printNumberDecreasing(int lastNum, int start)
+   {
+	   
+	   if ( start ==0 )
+		   return;
+	   
+	   System.out.print(start + ", ");
+	   
+	   printNumberDecreasing(lastNum, (start-1));
+   }
+	
+	public static void main(String[] args) {
+		
+		printNumberDecreasing(4,4);
+	}
+
+}
